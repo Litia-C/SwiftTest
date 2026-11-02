@@ -20,13 +20,9 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .kerning(-1)
-            HStack{
-                Text("1")
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Slider(value: $sliderValue, in: 1...100)
-                Text("100")
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            }
+            
+            SliderView(value: $sliderValue)
+
             Text("\(sliderValue)")
             Button("TRY"){
                 self.alertVisible = true
@@ -40,14 +36,27 @@ struct ContentView: View {
         }
         .padding()
         .background(Color("BackgroundColor"))
+    }.alert(isPresented: $alertVisible){
+        Alert(
+            title: Text("Hello"),
+            message: Text("This is my first alert"),
+            dismissButton: .default(Text("Got it"))
+            
+        )
     }
-        .alert(isPresented: $alertVisible){
-            Alert(
-                title: Text("Hello"),
-                message: Text("This is my first alert"),
-                dismissButton: .default(Text("Got it"))
-                
-            )
+    }
+}
+
+struct SliderView: View{
+    @Binding var value: Double
+    
+    var body: some View{
+        HStack{
+            Text("1")
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            Slider(value: $value, in: 1...100)
+            Text("100")
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
         }
     }
 }
