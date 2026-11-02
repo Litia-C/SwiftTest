@@ -46,6 +46,7 @@ struct ContentView: View {
             message: Text("\(game.points)"),
             dismissButton: .default(Text("OK")){
                 game.calculateTarget()
+                sliderValue = 50.0
             }
             
         )
