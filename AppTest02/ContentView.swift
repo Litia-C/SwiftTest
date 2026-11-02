@@ -10,13 +10,15 @@ import SwiftUI
 struct ContentView: View {
     @State var alertVisible = false
     @State var sliderValue = 20.0
+    
+    @State private var game = Game()
     var body: some View {
         ZStack{
         VStack{
             Text("🎯🎯🎯")
                 .font(.largeTitle)
             
-            Text("89")
+            Text("\(game.target)")
                 .font(.largeTitle)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .kerning(-1)
@@ -25,7 +27,9 @@ struct ContentView: View {
 
             Text("\(sliderValue)")
             Button("TRY"){
+                game.calculatePoint(sliderValue: sliderValue)
                 self.alertVisible = true
+                
             }
             .font(.title3)
             .foregroundColor(.white)
@@ -38,9 +42,11 @@ struct ContentView: View {
         .background(Color("BackgroundColor"))
     }.alert(isPresented: $alertVisible){
         Alert(
-            title: Text("Hello"),
-            message: Text("This is my first alert"),
-            dismissButton: .default(Text("Got it"))
+            title: Text("Tus puntos totales son..."),
+            message: Text("\(game.points)"),
+            dismissButton: .default(Text("OK")){
+                game.calculateTarget()
+            }
             
         )
     }
