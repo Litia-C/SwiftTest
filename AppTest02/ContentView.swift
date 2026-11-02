@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var alertVisible = false
+    @State var sliderValue = 20.0
     var body: some View {
+        ZStack{
         VStack{
             Text("🎯🎯🎯")
                 .font(.largeTitle)
@@ -20,21 +23,32 @@ struct ContentView: View {
             HStack{
                 Text("1")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Slider(value: .constant(10), in: 1...100)
+                Slider(value: $sliderValue, in: 1...100)
                 Text("100")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             }
+            Text("\(sliderValue)")
             Button("TRY"){
-                
+                self.alertVisible = true
             }
             .font(.title3)
             .foregroundColor(.white)
             .padding()
             
-            .background(Color.blue)
+            .background(Color.accentColor)
             .cornerRadius(21)
         }
         .padding()
+        .background(Color("BackgroundColor"))
+    }
+        .alert(isPresented: $alertVisible){
+            Alert(
+                title: Text("Hello"),
+                message: Text("This is my first alert"),
+                dismissButton: .default(Text("Got it"))
+                
+            )
+        }
     }
 }
 
