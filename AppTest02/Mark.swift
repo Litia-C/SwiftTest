@@ -6,7 +6,12 @@
 //
 
 import Foundation
-struct Mark {
+struct Mark: Comparable, Identifiable {
+    
+    static func <(lhs: Mark, rhs.Value) -> Bool {
+        
+    }
+    var id: ObjectIdentifier
     private(set) var value : Int
     private(set) var date : Date
 }

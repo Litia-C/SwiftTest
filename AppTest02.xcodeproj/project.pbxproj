@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EF0ACA4530AB497300F1EEAA /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0ACA4430AB497300F1EEAA /* Mark.swift */; };
+		EF0ACA4930AB4C2300F1EEAA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0ACA4830AB4C2300F1EEAA /* BackgroundView.swift */; };
+		EF0ACA4C30AB4C7D00F1EEAA /* MarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0ACA4B30AB4C7D00F1EEAA /* MarksView.swift */; };
 		EFAC97B73098D13B001957C2 /* AppTest02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC97B63098D13B001957C2 /* AppTest02App.swift */; };
 		EFAC97B93098D13B001957C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC97B83098D13B001957C2 /* ContentView.swift */; };
 		EFAC97BB3098D13C001957C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAC97BA3098D13C001957C2 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		EF0ACA4430AB497300F1EEAA /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		EF0ACA4830AB4C2300F1EEAA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		EF0ACA4B30AB4C7D00F1EEAA /* MarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarksView.swift; sourceTree = "<group>"; };
 		EFAC97B33098D13B001957C2 /* AppTest02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTest02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAC97B63098D13B001957C2 /* AppTest02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTest02App.swift; sourceTree = "<group>"; };
 		EFAC97B83098D13B001957C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF0ACA4730AB4BD300F1EEAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF0ACA4830AB4C2300F1EEAA /* BackgroundView.swift */,
+				EF0ACA4B30AB4C7D00F1EEAA /* MarksView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EFAC97AA3098D13B001957C2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		EFAC97B53098D13B001957C2 /* AppTest02 */ = {
 			isa = PBXGroup;
 			children = (
+				EF0ACA4730AB4BD300F1EEAA /* Views */,
 				EFAC97B63098D13B001957C2 /* AppTest02App.swift */,
 				EFAC97B83098D13B001957C2 /* ContentView.swift */,
 				EFAC97BA3098D13C001957C2 /* Assets.xcassets */,
@@ -144,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0ACA4930AB4C2300F1EEAA /* BackgroundView.swift in Sources */,
+				EF0ACA4C30AB4C7D00F1EEAA /* MarksView.swift in Sources */,
 				EF0ACA4530AB497300F1EEAA /* Mark.swift in Sources */,
 				EFAC97B93098D13B001957C2 /* ContentView.swift in Sources */,
 				EFAC97C73098E607001957C2 /* Game.swift in Sources */,
